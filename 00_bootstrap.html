@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid - Bootstrap</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <style>
+        .head {
+            padding: 0 10px;
+            margin: 0 0 10px 0;
+        }
+        .content {
+            margin: 0 0 10px 0;
+        }
+        .content > div {
+            height: 400px;
+        }
+        .top {
+            margin: 0 0 10px 0;
+            height: 160px !important;
+        }
+        .nav {
+            height: 570px;
+            padding: 0 10px;
+        }
+        .left {
+            width: 49%;
+            margin: 0 1% 0 0;
+        }
+        .footer {
+            padding: 1px 10px;
+            margin: -10px 0 0 0;
+        }
+        .wrapper {
+            margin: 0 0 10px 0;
+        }
+        .content-wrapper {
+            padding-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row head box">
+            <h2>Header</h2>
+        </div>
+        <div class="row wrapper">
+            <div class="col-lg-3 nav box">
+                <h2>Left Nav</h2>
+            </div>
+            <div class="col-lg-9 content-wrapper">
+                <div class="row content">
+                    <div class="col-lg-12 top box">
+                        <h2>Top article</h2>
+                    </div>
+                    <div class="col-lg-6 left box">
+                        <h2>Article left</h2>
+                    </div>
+                    <div class="col-lg-6 right box">
+                        <h2>Article right</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer box">
+            <h3>Footer</h3>
+        </footer>
+    </div>
+</body>
+</html>
