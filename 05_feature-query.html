@@ -7,43 +7,64 @@
     <title>CSS Grid - Feature query</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <style>
-    .container {
-
-    }
-    .head {
-
-    }
-    .nav {
-
-    }
-    .top {
-
+    .container > div {
+        height: 80px;
+        margin: 8px;
     }
     .left {
-
+        float: left;
+        width: 48%;
     }
     .right {
-
+        float: right;
+        width: 48%;
+    }
+    .header {
+        width: auto;
+        grid-column-start: 1;
+        grid-column-end: 5
+    }
+    .left {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .right {
+        grid-column-start: 3;
+        grid-column-end: 5;
     }
     .footer {
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+    .box { border-width:3px; }
 
+    @supports (display: grid) {
+        .container {
+            grid-gap: 10px;
+        }
+        .left {
+            width: auto;
+        }
+        .right {
+            width: auto;
+        }
+        .container > div {
+            height: 80px;
+            margin: 0;     
+        }
     }
     </style>
 </head>
 <body>
     <div class="container">
-        
-        <div class="head box"><h2>Header</h2></div>
-
-        <div class="nav box"><h2>Left Nav</h2></div>
-
-        <div class="top box"><h2>Top article</h2></div>
-
-        <div class="left box"><h2>Article left</h2></div>
-
-        <div class="right box"><h2>Article right</h2></div>
-        
-        <div class="footer box"><h2>Footer</h2></div>
+        <div class="box header"><h2>Header</h2></div>
+        <div class="box left"><h2>Content left</h2></div>
+        <div class="box right"><h2>Content right</h2></div>
+        <div class="box footer" style="clear:both;"><h2>Footer</h2></div>
     </div>
 </body>
 </html>
