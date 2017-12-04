@@ -8,25 +8,30 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <style>
     .container {
-        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-gap: 10px;
     }
     .head {
-        
+        grid-column: 1 / 4;
     }
     .nav {
-
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
     }
     .top {
-
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
     }
     .left {
-
+        grid-column: 2 / 3;
     }
     .right {
-
+        grid-column: 3 / 4;
     }
     .footer {
-
+        grid-column: 1 / 4;
+        grid-row: 4 / 5;
     }
     </style>
 </head>
