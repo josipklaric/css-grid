@@ -8,25 +8,30 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <style>
     .container {
-
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: 250px 3fr 2fr;
+        grid-gap: 1em;
+        grid-template-areas: 
+            "";
     }
     .head {
-
+        grid-area: head;
     }
     .nav {
-
+        grid-area: nav;
     }
     .top {
-
+        grid-area: top;
     }
     .left {
-
+        grid-area: left;
     }
     .right {
-
+        grid-area: right;
     }
     .footer {
-
+        grid-area: foot;
     }
     </style>
 </head>
