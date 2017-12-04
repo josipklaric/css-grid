@@ -10,7 +10,7 @@
     .container {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        grid-template-columns: 250px 3fr 2fr;
+        /*grid-template-rows: 250px 3fr 2fr;*/
         grid-gap: 1em;
         grid-template-areas: 
             "head head head head head head"
@@ -20,21 +20,25 @@
     }
     .head {
         grid-area: head;
+        height: 6em;
     }
     .nav {
         grid-area: nav;
     }
     .top {
         grid-area: top;
+        height: 8em;
     }
     .left {
         grid-area: left;
+        height: 20em;
     }
     .right {
         grid-area: right;
     }
     .footer {
         grid-area: foot;
+        min-height: 3em;
     }
     </style>
 </head>
