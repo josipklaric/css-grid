@@ -8,25 +8,66 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <style>
     .container {
-
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+        grid-template-areas: 
+            "head head"
+            "nav nav"
+            "top top"
+            "left left"
+            "right right"
+            "foot foot";
     }
     .head {
-
+        grid-area: head;
+        height: 6em;
     }
     .nav {
-
+        grid-area: nav;
     }
     .top {
-
+        grid-area: top;
+        height: 8em;
     }
     .left {
-
+        grid-area: left;
+        height: 20em;
     }
     .right {
-
+        grid-area: right;
+        height: 20em;
     }
     .footer {
-
+        grid-area: foot;
+        min-height: 3em;
+    }
+    /* tablets */
+    @media screen and (min-width: 760px) { 
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 10px;
+            grid-template-areas: 
+                "head head head head"
+                "top top top top"
+                "nav left left left"
+                "nav right right right"
+                "foot foot foot foot";
+        }
+    }
+    /* mobile phone */
+    @media screen and (min-width: 1200px) { 
+        .container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 1em;
+            grid-template-areas: 
+                "head head head head head head"
+                "nav top top top top top"
+                "nav left left left right right"
+                "foot foot foot foot foot foot";
+        }
     }
     </style>
 </head>
