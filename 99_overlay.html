@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid - Overlay</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <style>
+    .head {
+        grid-area: head;
+    }
+    .nav {
+        grid-area: nav;
+    }
+    .top {
+        grid-area: top;
+    }
+    .left {
+        grid-area: left;
+    }
+    .right {
+        grid-area: right;
+    }
+    .footer {
+        grid-area: footer;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas: 
+            "head head head"
+            "nav top top"
+            "nav left right"
+            "nav left right"
+            "footer footer footer";
+
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        width: 960px;
+        margin: 0 auto;
+        padding: 1em;
+    }
+    .box {
+        background-color: #1EAAFC;
+        background-image: linear-gradient(130deg, rgb(141, 202, 166) 0%, #1EAAFC 85%, #3EDFD7 100%);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        color: #fff;
+        border-radius: 4px;
+        border: 6px solid #171717;
+        z-index:10;
+    }
+    .overlay {
+        grid-row: 3 / 5;
+        grid-column: 2 / 4;
+        border: 6px solid rgb(128, 1, 128);
+        background: rgba(255, 0, 255, .5);
+        z-index: 100;
+        font-size: 46px;
+        color: #fff;
+        justify-self: center;
+        align-self: center;
+        height: 3em;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box head"><h2>Header</h2></div>
+        <div class="box nav"><h2>Left Nav</h2></div>
+        <div class="box top"><h2>Laboris deserunt eu deserunt duis.</h2></div>
+        <div class="box left"><h2>Culpa velit labore tempor et. Aute aliquip incididunt exercitation eiusmod eiusmod ut tempor. Velit eiusmod eiusmod excepteur occaecat elit pariatur cillum ut esse officia. Enim duis dolor veniam eu. Eu laborum deserunt eiusmod et reprehenderit enim nisi laborum commodo fugiat amet nulla.</h2></div>
+        <div class="box right"><h2>Irure ad adipisicing non dolore ipsum labore non nisi. Id exercitation qui labore esse proident tempor aliquip ullamco ullamco cupidatat occaecat. Commodo eiusmod sunt ullamco consectetur anim cupidatat eiusmod sunt incididunt esse nisi amet labore.</h2></div>
+        <div class="box footer"><h2>Footer</h2></div>
+        <div class="overlay">Overlay</div>
+    </div>
+</body>
+</html>
