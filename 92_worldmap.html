@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid - Areas sample</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <style>
+    .main { 
+        display: grid;
+        margin: 50px;
+        grid-template-columns: repeat(90, 1fr); 
+        /* grid-auto-rows: 1fr 1fr 1fr; */
+        /* grid-template-rows: repeat(58, 1fr); */
+        grid-gap: 1px;
+        grid-auto-rows: 20px;
+        grid-template-areas: 
+". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+". . . . . . . . . . . . . . . . . . . . a a a . . . . . ð ð ð ð . . . . . . . . . . . . . . . . . . . . . ¤ . . . . . . . . . . . . . . . . . . . . . . . ."
+". . . . . . . . . . . . . . . . . . c c c c c . . . b b b b b b b b . . . . . . . . . . . . . . . . . . ƨ . . . . . . þ þ þ . . . . . . . . . . . . . . . ."
+". . . . . . . . . . . . . . . . . . . d d d d d . . ß ß ß ß ß ß . . . . . . . . . . . ĝ ĝ . . . . . . ƶ . . ƻ ƻ ƻ ƻ ƻ ƻ ƻ ƻ ƻ ƻ ƻ ƻ . . . . . . . . . . . ."
+". . . ē ē ē . . . . e e e e e . . . . . đ đ đ . . . ø ø ø ø . . . . . . . . . . . . ğ ğ ğ ğ ğ . . . . . ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ ŝ . . . . ."
+". . f f f f f f f f f f f f f f f f f . . g g . . . . h h h . . . . . . . . . . . ġ ġ . ĥ ĥ ĥ ĥ . . ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ ŗ . ."
+". æ . . j j j j j j j j j j j j j . . . . . . . . . . ÷ ÷ . . . ⌂ . . . . . . . ģ ģ . ħ ħ ħ ħ . ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ř ."
+". . . . . . . k k k k k k k k k k . . . . . . . . . . . . . . . . . . . . £ . . . ķ . ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ ŕ . ś . . ."
+". . . . . . . m m m m m m m m m m m . . . i i . . . . . . . . . . . . . . ¿ . . ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő ő . . ş . . ."
+". . . . . . . o o o o o o o o o o o o o . l l l l . . . . . . . . . . . . . ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ ŏ . . . ù . . . ."
+". . . . . . . . . p p p p p p p p p p p p p p . . . . . . . . . . . . . ō ō ō ō ō ō ō ō ō ō ō ō . œ œ œ œ œ œ œ œ œ œ œ œ œ œ œ œ œ œ œ œ . . . ö . . . . ."
+". . . . . . . . . q q q q q q q q q q q q q . . . . . . . . . . . . . . ń ń ń . . ņ ņ . ŋ . . ŉ . ũ ũ ũ ũ ũ ũ ũ ũ ũ ũ ũ ũ ũ ũ ũ ũ ũ ũ ũ . ú . . . . . . . ."
+". . . . . . . . . . . r r r r r r r r r . . . . . . . . . . . . . . . . ĸ ĸ . . . . ň ň . ū ū ū ū ū ū ū ū ū ū ū ū ū ū ū ū ū ū ū ū ū . ÿ . ê . . . . . . . ."
+". . . . . . . . . . . . s s s . . . . © . . . . . . . . . . . . . . . ů ů ů ů ů ů . . . ą . ă ă ă . ŭ ŭ ŭ ŭ ŭ ŭ ŭ ŭ ŭ ŭ ŭ ŭ ŭ ŭ ŭ ŭ . ¥ ¥ . . . . . . . . ."
+". . . . . . . . . . . . . . t t t . . . . . . . . . . . . . . . . . ű ű ű ű ű ű ű ű ű ű ű ű . ā ā ā . . . . ý ý ý ý ý ý ý ý ý ý . . . . . . . . . . . . . ."
+". . . . . . . . . . . . . . . u u u u . . . . . . . . . . . . . . . ų ų ų ų ų ų ų ų ų ų ų ų ų . . . . . . . ô ô ô . . . ó ó ó ó . õ õ . . . . . . . . . . ."
+". . . . . . . . . . . . . . . . . . . v v v v v . . . . . . . . . . ŵ ŵ ŵ ŵ ŵ ŵ ŵ ŵ ŵ ŵ ŵ ŵ ŵ ŵ ŵ . . . . . . ò ò . . . ñ ñ . . . . . . . . . . . . . . . ."
+". . . . . . . . . . . . . . . . . z z z z z z z z . . . . . . . . . . ŷ ŷ ŷ ŷ ŷ ŷ ŷ ŷ ŷ ŷ ŷ ŷ ŷ . . . . . . . . . . . . . . ë ë ë . . . . . . . . . . . . ."
+". . . . . . . . . . . . . . . . . y y y y y y y y y y y . . . . . . . . . . . ź ź ź ź ź ź ź ź . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ." 
+". . . . . . . . . . . . . . . . . . x x x x x x x x x . . . . . . . . . . . . . ż ż ż ż ż ż ż . . . . . . . . . . . . . . . . . . ¢ ¢ . ȼ ȼ . . . . . . . ."
+". . . . . . . . . . . . . . . . . . . n n n n n n n n . . . . . . . . . . . . . ƛ ƛ ƛ ƛ ƛ . . . . . . . . . . . . . . . . . . . § § § § § § . . . . . . . ."
+". . . . . . . . . . . . . . . . . . . w w w w w w . . . . . . . . . . . . . . . . Ɯ Ɯ Ɯ Ɯ . ť . . . . . . . . . . . . . . . ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ . . . . . ."
+". . . . . . . . . . . . . . . . . . . ž ž ž ž ž . . . . . . . . . . . . . . . . . ƞ ƞ ƞ . ţ . . . . . . . . . . . . . . . . é é é é é é é é é é . . . . . ."
+". . . . . . . . . . . . . . . . . . . š š š . . . . . . . . . . . . . . . . . . . . ŧ ŧ . . . . . . . . . . . . . . . . . . . . . . . µ µ µ . . è . . . . ."
+". . . . . . . . . . . . . . . . . . č č . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ĕ . . . . . ."
+". . . . . . . . . . . . . . . . . . . ç . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
+". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+    }
+    .dot {
+        height: 20px;
+        min-width: 20px;
+        min-height: 20px;
+        background-color:peru;
+        margin: 1px;
+		text-align: center;
+		color: peru;
+    }
+
+    .a { grid-area: a; } 
+    .b { grid-area: b; } 
+    .c { grid-area: c; } 
+    .d { grid-area: d; } 
+    .e { grid-area: e; } 
+    .f { grid-area: f; } 
+    .g { grid-area: g; } 
+    .h { grid-area: h; } 
+    .i { grid-area: i; } 
+    .j { grid-area: j; } 
+    .k { grid-area: k; } 
+    .l { grid-area: l; } 
+    .m { grid-area: m; } 
+    .n { grid-area: n; } 
+    .o { grid-area: o; } 
+    .p { grid-area: p; } 
+    .q { grid-area: q; } 
+    .r { grid-area: r; } 
+    .s { grid-area: s; } 
+    .t { grid-area: t; } 
+    .u { grid-area: u; } 
+    .v { grid-area: v; } 
+    .w { grid-area: w; } 
+    .z { grid-area: z; } 
+    .x { grid-area: x; } 
+    .y { grid-area: y; } 
+    .♫ { grid-area: ♫; }
+    .© { grid-area: ©; }
+	.¢ { grid-area: ¢; }
+    .ȼ { grid-area: ȼ; }
+	.£ { grid-area: £; }
+	.¤ { grid-area: ¤; }
+	.¥ { grid-area: ¥; }
+	.§ { grid-area: §; }
+	.µ { grid-area: µ; }
+	.đ { grid-area: đ; }
+	.ø { grid-area: ø; }
+	.÷ { grid-area: ÷; }
+	.ð { grid-area: ð; }
+	.æ { grid-area: æ; }
+	.ç { grid-area: ç; }
+	.ĕ { grid-area: ĕ; }
+	.è { grid-area: è; }
+	.é { grid-area: é; }
+	.ê { grid-area: ê; }
+	.ë { grid-area: ë; }
+	.ñ { grid-area: ñ; }
+	.ò { grid-area: ò; }
+	.ó { grid-area: ó; }
+	.ô { grid-area: ô; }
+	.õ { grid-area: õ; }
+	.ö { grid-area: ö; }
+	.ù { grid-area: ù; }
+	.ú { grid-area: ú; }
+	.ý { grid-area: ý; }
+	.ÿ { grid-area: ÿ; }
+	.ā { grid-area: ā; }
+	.ă { grid-area: ă; }
+	.ą { grid-area: ą; }
+	.ƻ { grid-area: ƻ; }
+	.ĝ { grid-area: ĝ; }
+	.ğ { grid-area: ğ; }
+	.ġ { grid-area: ġ; }
+	.ģ { grid-area: ģ; }
+	.ĥ { grid-area: ĥ; }
+	.ħ { grid-area: ħ; }
+	.ķ { grid-area: ķ; }
+	.ĸ { grid-area: ĸ; }
+	.ń { grid-area: ń; }
+	.ņ { grid-area: ņ; }
+	.ň { grid-area: ň; }
+	.ŋ { grid-area: ŋ; }
+	.ŉ { grid-area: ŉ; }
+	.ō { grid-area: ō; }
+	.ŏ { grid-area: ŏ; }
+	.ő { grid-area: ő; }
+	.œ { grid-area: œ; }
+	.ŕ { grid-area: ŕ; }
+	.ř { grid-area: ř; }
+	.ŗ { grid-area: ŗ; }
+	.ŝ { grid-area: ŝ; }
+	.ś { grid-area: ś; }
+	.ş { grid-area: ş; }
+	.ţ { grid-area: ţ; }
+	.ť { grid-area: ť; }
+	.ŧ { grid-area: ŧ; }
+	.ũ { grid-area: ũ; }
+	.ū { grid-area: ū; }
+	.ŭ { grid-area: ŭ; }
+	.ű { grid-area: ű; }
+	.ů { grid-area: ů; }
+	.ų { grid-area: ų; }
+	.ŵ { grid-area: ŵ; }
+	.ŷ { grid-area: ŷ; }
+	.ź { grid-area: ź; }
+	.ż { grid-area: ż; }
+	.ƛ { grid-area: ƛ; }
+	.Ɯ { grid-area: Ɯ; }
+	.ƞ { grid-area: ƞ; }
+	.ƨ { grid-area: ƨ; }
+	.ƶ { grid-area: ƶ; }
+	.ß { grid-area: ß; }
+	.¿ { grid-area: ¿; }
+	.ž { grid-area: ž; }
+	.š { grid-area: š; }
+	.č { grid-area: č; }
+	.⌂ { grid-area: ⌂; }
+	.ē { grid-area: ē; }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="dot a">a</div>
+        <div class="dot b">b</div>
+        <div class="dot c">c</div>
+        <div class="dot d">d</div>
+        <div class="dot e">e</div>
+        <div class="dot f">f</div>
+        <div class="dot g">g</div>
+        <div class="dot h">h</div>
+        <div class="dot i">i</div>
+        <div class="dot j">j</div>
+        <div class="dot k">k</div>
+        <div class="dot l">l</div>
+        <div class="dot m">m</div>
+        <div class="dot n">n</div>
+        <div class="dot o">o</div>
+        <div class="dot p">p</div>
+        <div class="dot q">q</div>
+        <div class="dot r">r</div>
+        <div class="dot s">s</div>
+        <div class="dot t">t</div>
+        <div class="dot u">u</div>
+        <div class="dot v">v</div>
+        <div class="dot w">w</div>
+        <div class="dot z">z</div>
+        <div class="dot x">x</div>
+        <div class="dot y">y</div>
+        <div class="dot ♫">♫</div>
+        <div class="dot ©">©</div>
+        <div class="dot ¢">¢</div>
+        <div class="dot ȼ">ȼ</div>
+		<div class="dot £">£</div>
+		<div class="dot ¤">¤</div>
+		<div class="dot ¥">¥</div>
+		<div class="dot §">§</div>
+		<div class="dot µ">µ</div>
+		<div class="dot đ">đ</div>
+		<div class="dot ø">ø</div>
+		<div class="dot ÷">÷</div>
+		<div class="dot ð">ð</div>
+		<div class="dot æ">æ</div>
+		<div class="dot ç">ç</div>
+		<div class="dot ĕ">ĕ</div>
+		<div class="dot è">è</div>
+		<div class="dot é">é</div>
+		<div class="dot ê">ê</div>
+		<div class="dot ë">ë</div>
+		<div class="dot ñ">ñ</div>
+		<div class="dot ò">ò</div>
+		<div class="dot ó">ó</div>
+		<div class="dot ô">ô</div>
+		<div class="dot õ">õ</div>
+		<div class="dot ö">ö</div>
+		<div class="dot ù">ù</div>
+		<div class="dot ú">ú</div>
+		<div class="dot ý">ý</div>
+		<div class="dot ÿ">ÿ</div>
+		<div class="dot ā">ā</div>
+		<div class="dot ă">ă</div>
+		<div class="dot ą">ą</div>
+		<div class="dot ƻ">ƻ</div>
+		<div class="dot ĝ">ĝ</div>
+		<div class="dot ğ">ğ</div>
+		<div class="dot ġ">ġ</div>
+		<div class="dot ģ">ģ</div>
+		<div class="dot ĥ">ĥ</div>
+		<div class="dot ħ">ħ</div>
+		<div class="dot ķ">ķ</div>
+		<div class="dot ĸ">ĸ</div>
+		<div class="dot ń">ń</div>
+		<div class="dot ņ">ņ</div>
+		<div class="dot ň">ň</div>
+		<div class="dot ŋ">ŋ</div>
+		<div class="dot ŉ">ŉ</div>
+		<div class="dot ō">ō</div>
+		<div class="dot ŏ">ŏ</div>
+		<div class="dot ő">ő</div>
+		<div class="dot œ">œ</div>
+		<div class="dot ŕ">ŕ</div>
+		<div class="dot ř">ř</div>
+		<div class="dot ŗ">ŗ</div>
+		<div class="dot ŝ">ŝ</div>
+		<div class="dot ś">ś</div>
+		<div class="dot ş">ş</div>
+		<div class="dot ţ">ţ</div>
+		<div class="dot ť">ť</div>
+		<div class="dot ŧ">ŧ</div>
+		<div class="dot ũ">ũ</div>
+		<div class="dot ū">ū</div>
+		<div class="dot ŭ">ŭ</div>
+		<div class="dot ű">ű</div>
+		<div class="dot ů">ů</div>
+		<div class="dot ų">ų</div>
+		<div class="dot ŵ">ŵ</div>
+		<div class="dot ŷ">ŷ</div>
+		<div class="dot ź">ź</div>
+		<div class="dot ż">ż</div>
+		<div class="dot ƛ">ƛ</div>
+		<div class="dot Ɯ">Ɯ</div>
+		<div class="dot ƞ">ƞ</div>
+		<div class="dot ƨ">ƨ</div>
+		<div class="dot ƶ">ƶ</div>
+		<div class="dot ß">ß</div>
+		<div class="dot ¿">¿</div>
+		<div class="dot ž">ž</div>	
+		<div class="dot š">š</div>	
+		<div class="dot č">č</div> 	
+		<div class="dot ⌂">⌂</div>
+		<div class="dot ē">ē</div>
+    </div>
+</body>
+</html>
