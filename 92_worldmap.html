@@ -7,6 +7,15 @@
     <title>CSS Grid - Areas sample</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <style>
+    .dot {
+        height: 20px;
+        min-width: 20px;
+        min-height: 20px;
+        background-color:peru;
+        margin: 1px;
+		text-align: center;
+		color: peru;
+    }
     .main { 
         display: grid;
         margin: 50px;
@@ -39,21 +48,12 @@
 ". . . . . . . . . . . . . . . . . . . n n n n n n n n . . . . . . . . . . . . . ƛ ƛ ƛ ƛ ƛ . . . . . . . . . . . . . . . . . . . § § § § § § . . . . . . . ."
 ". . . . . . . . . . . . . . . . . . . w w w w w w . . . . . . . . . . . . . . . . Ɯ Ɯ Ɯ Ɯ . ť . . . . . . . . . . . . . . . ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ ♫ . . . . . ."
 ". . . . . . . . . . . . . . . . . . . ž ž ž ž ž . . . . . . . . . . . . . . . . . ƞ ƞ ƞ . ţ . . . . . . . . . . . . . . . . é é é é é é é é é é . . . . . ."
-". . . . . . . . . . . . . . . . . . . š š š . . . . . . . . . . . . . . . . . . . . ŧ ŧ . . . . . . . . . . . . . . . . . . . . . . . µ µ µ . . è . . . . ."
+". . . . . . . . . . . . . . . . . . . š š š . . . . . . . . . . . . . . . . . . . . ŧ ŧ . . . . . . . . . . . . . . . . . . . Ⰰ . . . µ µ µ . . è . . . . ."
 ". . . . . . . . . . . . . . . . . . č č . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ĕ . . . . . ."
 ". . . . . . . . . . . . . . . . . . . ç . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
 ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
-    }
-    .dot {
-        height: 20px;
-        min-width: 20px;
-        min-height: 20px;
-        background-color:peru;
-        margin: 1px;
-		text-align: center;
-		color: peru;
-    }
-
+    } 
+	
     .a { grid-area: a; } 
     .b { grid-area: b; } 
     .c { grid-area: c; } 
@@ -162,6 +162,7 @@
 	.č { grid-area: č; }
 	.⌂ { grid-area: ⌂; }
 	.ē { grid-area: ē; }
+	.Ⰰ { grid-area: Ⰰ; }
     </style>
 </head>
 <body>
@@ -274,6 +275,9 @@
 		<div class="dot č">č</div> 	
 		<div class="dot ⌂">⌂</div>
 		<div class="dot ē">ē</div>
-    </div>
+		<div class="dot Ⰰ">Ⰰ</div>
+	</div>
+	
+	<a href="index.html" class="float">Home</a>
 </body>
 </html>
