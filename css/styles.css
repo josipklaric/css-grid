@@ -62,8 +62,12 @@ dd {
 	color:#FFF;
 	border-radius: 50px;
 	text-align: center;
-    box-shadow: 2px 2px 3px #999;
+    box-shadow: 3px 2px 12px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.float:hover {
+    transform: scale(1.1); 
 }
