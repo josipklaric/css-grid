@@ -71,3 +71,7 @@ dd {
 .float:hover {
     transform: scale(1.1); 
 }
+
+.code {
+    font-family: 'Courier New', Courier, monospace
+}
