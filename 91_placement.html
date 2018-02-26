@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid - Auto placemnent</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <style>
+
+    .container {
+        display: grid;        
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        list-style: none;
+        margin: 20px auto 0 auto;
+        padding: 0;
+    }
+    .container li {
+        margin: 5px;
+        border: 2px solid rgb(160, 158, 158);
+        padding: 0px;
+        min-width: 5%;
+        overflow: hidden;
+        box-shadow: 3px 2px 12px rgba(0, 0, 0, 0.4);
+    }
+    li h3 {
+        background-color:#6C52D9;
+        color: #fff;
+        padding: 5px;
+        border-bottom: 1px solid #fff;
+        height: 45px;
+    }
+    img { 
+        max-width: 100%; 
+    }
+
+    </style>
+</head>
+<body>
+    <ul class="container">
+        <li>
+            <h3>1. Sljeme, Činovnička livada</h3>
+            <img src="images/Sljeme_01.jpg" alt="Sljeme, Činovnička livada, 2018." />
+        </li>
+        <li>
+            <h3>2. Sljeme, Činovnička livada</h3>
+            <img src="images/Sljeme_02.jpg" alt="Sljeme, Činovnička livada, 2018." />
+        </li>  
+        <li>
+            <h3>3. Sljeme, Činovnička livada</h3>
+            <img src="images/Sljeme_03.jpg" alt="Sljeme, Činovnička livada, 2018." />
+        </li>
+        <li>
+            <h3>4. Sljeme, Činovnička livada</h3>
+            <img src="images/Sljeme_04.jpg" alt="Sljeme, Činovnička livada, 2018." />
+        </li>
+        <li>
+            <h3>5. Sljeme, Činovnička livada</h3>
+            <img src="images/Sljeme_05.jpg" alt="Sljeme, Činovnička livada, 2018." />
+        </li>
+        <li>
+            <h3>6. Sljeme, Činovnička livada</h3>
+            <img src="images/Sljeme_06.jpg" alt="Sljeme, Činovnička livada, 2018." />
+        </li>
+        <li>
+            <h3>7. Sljeme, Činovnička livada</h3>
+            <img src="images/Sljeme_07.jpg" alt="Sljeme, Činovnička livada, 2018." />
+        </li>
+        <li>
+            <h3>8. Sljeme, Činovnička livada</h3>
+            <img src="images/Sljeme_08.jpg" alt="Sljeme, Činovnička livada, 2018." />
+        </li>
+        <li>
+            <h3>9. Sljeme, Činovnička livada</h3>
+            <img src="images/Sljeme_09.jpg" alt="Sljeme, Činovnička livada, 2018." />
+        </li>
+        <li>
+            <h3>10. Sljeme, Činovnička livada</h3>
+            <img src="images/Sljeme_10.jpg" alt="Sljeme, Činovnička livada, 2018." />
+        </li>
+    </ul> 
+</body>
+</html>
