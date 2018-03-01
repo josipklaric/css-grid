@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CSS Grid - Moved to Grid</title>
+    <title>CSS Grid - Bootstrap sample moved to CSS Grid</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <style>
     .container {
         display:  grid;
         grid-template-columns: 1fr 1fr 1fr;
+        /* using named lines below */
+        /* grid-template-columns: [left-start] 1fr [mid-start] 1fr [mid-end] 1fr [right-end]; */
         grid-gap: 10px;
     }
     .head {
         grid-column: 1 / 4;
+        /* grid-column: left-start / right-end; */
         height: 6em;
     }
     .nav {
         grid-column: 1 / 2;
+        /* grid-column: left-start / mid-start; */
         grid-row: 2 / 4;
     }
     .top {
         grid-column: 2 / 4;
+        /* grid-column: mid-start / 4; */
         height: 8em;
     }
     .left {
