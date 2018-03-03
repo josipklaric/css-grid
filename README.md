@@ -3,6 +3,7 @@ This is my demo project used for presentation about CSS Grid for developers.
 
 ## Bootstrap sample
 Kinda holy grail layout using bootstrap. This example is purely used to demonstrate the markap verbosity of creating such layout using bootstrap, or similar UI frameworks.
+![alt text](https://raw.githubusercontent.com/josipklaric/css-grid/master/images/screens/HolyGrailLayout.png)
 
 ## Grid sample
 This example shows how to acheive the same holy grail layout using CSS Grid. Elements are positioned using line numbers.
@@ -15,6 +16,7 @@ Again, the same layout as above, but this time it is made responsive (for three 
 
 ## Responsive #2
 This sample shows how to acheive simple but fully responsive layout by setting just few CSS Grid properties.
+![alt text](https://raw.githubusercontent.com/josipklaric/css-grid/master/images/screens/CssGridResponsive.png)
 
 ## Feature query sample
 This sample shows how CSS Grid can is supposed to override old fashion way of layout like float. Floating is automatically overriden with CSS Grid in browsers where it is supported. Usually it is needed to use feature queries to detect certain feature and override width and marging.
@@ -23,8 +25,12 @@ This sample shows how CSS Grid can is supposed to override old fashion way of la
 Sample of CSS Grid auto placement algorithm with dense packing mode
 
 ## World map
-Another sample of CSS Grid areas with ASCII art applied
+Another sample of CSS Grid areas with ASCII art applied. Below is CSS Grid template areas defined in ASCII art manner. 
+![alt text](https://raw.githubusercontent.com/josipklaric/css-grid/master/images/screens/WorldMap_css.png)
+
+Below is what is rendered in browser. 
+![alt text](https://raw.githubusercontent.com/josipklaric/css-grid/master/images/screens/WorldMap.png)
 
 ## Overlay
 Another sample of CSS Grid layout with overlay layer. Layaring is done by using z-index.
-
+![alt text](https://raw.githubusercontent.com/josipklaric/css-grid/master/images/screens/CssGridOverlay.png)
