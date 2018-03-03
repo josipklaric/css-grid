@@ -1,5 +1,5 @@
 # CSS Grid demo samples
-This is my demo used fore presentation about CSS Grid for developers. 
+This is my demo project used for presentation about CSS Grid for developers. 
 
 ## Bootstrap sample
 Kinda holy grail layout using bootstrap. This example is purely used to demonstrate the markap verbosity of creating such layout using bootstrap, or similar UI frameworks.
