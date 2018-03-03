@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CSS Grid - Overlay</title>
+    <title>CSS Grid - Overlay sample</title>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <style>
     .head {
         grid-area: head;
+        height: 4em;
     }
     .nav {
         grid-area: nav;
+        height: 35em;
     }
     .top {
         grid-area: top;
@@ -24,6 +26,7 @@
     }
     .footer {
         grid-area: footer;
+        height: 3em;
     }
     .container {
         display: grid;
@@ -51,7 +54,9 @@
         color: #fff;
         justify-self: center;
         align-self: center;
+        text-align: center;
         height: 3em;
+        width: 10em;
     }
     </style>
 </head>
